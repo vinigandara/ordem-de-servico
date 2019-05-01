@@ -10,6 +10,12 @@ class Post(models.Model):
             default=timezone.now)
     published_date = models.DateTimeField(
             blank=True, null=True)
+    
+class Equipamentos():
+    Nome do equipamento = models.Textfield()
+    Marca = models.Textfield()
+    Modelo = models.Textfield()
+    Nº de série = models.Textfield()
 
     def publish(self):
         self.published_date = timezone.now()
