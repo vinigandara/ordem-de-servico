@@ -12,14 +12,14 @@ class Post(models.Model):
             blank=True, null=True)
     
 class Equipamentos(models.Model):
-    Nome do equipamento = models.Textfield()
-    Marca = models.Textfield()
-    Modelo = models.Textfield()
-    Nº de série = models.Textfield()
+    nome_do_equipamento = models.Textfield()
+    marca = models.Textfield()
+    modelo = models.Textfield()
+    n_de_serie = models.Textfield()
 
     def publish(self):
         self.published_date = timezone.now()
         self.save()
 
     def __str__(self):
-        return self.title
+        return self.nome_do_equipamento
