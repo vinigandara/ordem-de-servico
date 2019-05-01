@@ -11,7 +11,7 @@ class Post(models.Model):
     published_date = models.DateTimeField(
             blank=True, null=True)
     
-class Equipamentos():
+class Equipamentos(models.Model):
     Nome do equipamento = models.Textfield()
     Marca = models.Textfield()
     Modelo = models.Textfield()
